@@ -13,8 +13,8 @@ echo "move kernel source"
 cd linux
 
 echo "make defconfig"
-make O=OUTPUT bcm2709_defconfig
+make O=$OUTPUT bcm2709_defconfig
 
 echo "kernel build"
-make 0=$OUTPUT zImage modules dtbs -j4 2>&1 | tee $BUILD_LOG
+make O=$OUTPUT zImage modules dtbs -j4 2>&1 | tee $BUILD_LOG
 
