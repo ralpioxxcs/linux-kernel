@@ -13,8 +13,4 @@ RUN apt-get update \
 RUN apt-get install -y git bc bison flex libssl-dev make
 
 WORKDIR /project
-RUN git clone --depth=1 https://github.com/raspberrypi/linux
-
-
-
-	 
+RUN git clone --depth=1 --branch rpi-4.19.y https://github.com/raspberrypi/linux
